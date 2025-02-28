@@ -1,15 +1,26 @@
 /*******************************
  * @author: Mike Awad
- * @description: Root Page
+ * @description: About Us Page
  * =====================
+ * [-]
+ * [-]
+ *
+ *
+ * ????? shadcn/UI
  *******************************/
-import { redirect } from "next/navigation";
+import React from "react";
 
-export default function RootPage() {
-  redirect("/en");
-}
+const AboutUsPage = () => {
+  return <div>AboutUsPage</div>;
+};
+
+export default AboutUsPage;
 /*******************************
  * Notes:
  * =====================
- * Redirect to Locale Folder then www layout
+ *
+ *
+ *
+ *
+ *
  *******************************/

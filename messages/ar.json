@@ -1,0 +1,64 @@
+{
+  "====================": "",
+  "_comment": "Nav Bar",
+  "====================": "",
+  "Navbar": {
+    "Home": "الصفحة الرئيسية",
+    "FlightBooking": "رحلات طيرات",
+    "OurServices": "خدماتنا",
+    "AboutUs": "من نحن",
+    "ContactUs": "اتصل بنا",
+    "AllRightsReserved": "© جميع الحقوق محفوظة لشركة سكاي ترفل{YY}",
+    "Company": "الشركة",
+    "Terms": "الشروط والأحكام",
+    "PrivacyPolicy": "سياسة الخصوصية"
+  },
+  "Languages": {
+    "en": "English",
+    "fr": "French",
+    "ar": "عربي"
+  },
+  "====================": "",
+  "_comment": "Hero Section",
+  "====================": "",
+  "Hero": {
+    "ContactUs": {
+      "H1": "سكاي ترافل",
+      "P1": "اتصل بنا لأي استفسار"
+    }
+  },
+  "====================": "",
+  "_comment": "Home Page",
+  "====================": "",
+  "Home": {},
+  "====================": "",
+  "_comment": "Search Component",
+  "====================": "",
+  "Search": {
+    "SearchBarComponent": {
+      "Search": "بحث واحد بسيط والملايين من الرحلات الجوية الرخيصة",
+      "FromAirport": "من مطار",
+      "FromDate": "تاريخ المغادرة",
+      "ToAirport": "إلى مطار",
+      "ToDate": "رحلة العودة",
+      "PickDate": "اختر موعدًا"
+    },
+    "SearchComponent": {
+      "Placeholder": "ابحث عن مطار (الاسم، الرمز، المدينة)",
+      "Searching": "جاري البحث ...",
+      "NoResults": "لا توجد نتائج"
+    }
+  },
+  "====================": "",
+  "_comment": "ContactUs Page",
+  "====================": "",
+  "ContactUs": {
+    "ContactUs": "اتصل بنا",
+    "Form": {
+      "FullName": "الاسم الكامل",
+      "Email": "الإيميل",
+      "Subject": "الموضوع",
+      "Message": "رسالتك"
+    }
+  }
+}

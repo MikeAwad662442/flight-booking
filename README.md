@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+---
+author: "Mike Awad"
+description: "Flight Booking"
+---
 
-## Getting Started
+# 🛫 Flight Booking 🛬
 
-First, run the development server:
+## Libraries that will be used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- "next": "15.1.0"
+- "react": "^19.0.0"
+- next-intl => Next.js internationalization (i18n)
+- shadcn-ui => Build your component library
+- react-hook-form => build Form
+- zod => TypeScript-first schema validation with static type inference
+- sqlite3 => Asynchronous, non-blocking SQLite3 bindings for Node.js.
+- prisma && @prisma/client => Prisma Client JS is an auto-generated query builder that enables type-safe database access and reduces boilerplate
+- sharp => To convert large images in common formats to smaller, web-friendly JPEG, PNG, WebP, GIF and AVIF images of varying dimensions.
+
+## dependencies Libraries
+
+```Js
+npm i next-intl react-hook-form zod @hookform/resolvers @auth/prisma-adapter @prisma/client sqlite3
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## devDependencies Libraries
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```Js
+npm i -D eslint-config-prettier prettier prettier-plugin-tailwindcss prisma
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+✅ الفرونت إند:
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- تصميم واجهة حجز التذاكر.
+- عرض الرحلات المتاحة بطريقة منظمة وسهلة الاستخدام.
+- نموذج إدخال بيانات الركاب والدفع.
+- تجربة مستخدم سلسة عبر الأجهزة المختلفة.

@@ -1,0 +1,64 @@
+{
+  "====================": "",
+  "_comment": "Nav Bar",
+  "====================": "",
+  "Navbar": {
+    "Home": "Home",
+    "FlightBooking": "Flight Booking",
+    "OurServices": "Our Services",
+    "AboutUs": "About Us",
+    "ContactUs": "Contact Us",
+    "AllRightsReserved": "© SkyTravel {YY} All rights reserved",
+    "Company": "Company",
+    "Terms": "Terms & Conditions",
+    "PrivacyPolicy": "Privacy Policy"
+  },
+  "Languages": {
+    "en": "English",
+    "fr": "French",
+    "ar": "عربي"
+  },
+  "====================": "",
+  "_comment": "Hero Section",
+  "====================": "",
+  "Hero": {
+    "ContactUs": {
+      "H1": "Sky Travel",
+      "P1": "Contact For Any Query"
+    }
+  },
+  "====================": "",
+  "_comment": "Home Page",
+  "====================": "",
+  "Home": {},
+  "====================": "",
+  "_comment": "Search Component",
+  "====================": "",
+  "Search": {
+    "SearchBarComponent": {
+      "Search": "One simple search and millions of cheap flights.",
+      "FromAirport": "from Airport",
+      "FromDate": "Check-out date",
+      "ToAirport": "to Airport",
+      "ToDate": "Return Flight",
+      "PickDate": "Pick a date"
+    },
+    "SearchComponent": {
+      "Placeholder": "Search for airport (name, code, city)",
+      "Searching": "Searching ...",
+      "NoResults": "No results found"
+    }
+  },
+  "====================": "",
+  "_comment": "ContactUs Page",
+  "====================": "",
+  "ContactUs": {
+    "ContactUs": "Contact Us",
+    "Form": {
+      "FullName": "Full Name",
+      "Email": "Email",
+      "Subject": "Subject",
+      "Message": "Your message"
+    }
+  }
+}
