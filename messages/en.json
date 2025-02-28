@@ -47,6 +47,18 @@
       "Placeholder": "Search for airport (name, code, city)",
       "Searching": "Searching ...",
       "NoResults": "No results found"
+    },
+    "OtherInfo": {
+      "Header": "Travelers and Cabin Class",
+      "Cabin": "Cabin Class",
+      "economy": "Economy",
+      "premium_economy": "Premium",
+      "business": "Business",
+      "first": "First",
+      "Adults": "Adults +12",
+      "Children": "Children 0-12",
+      "Note1": "Your age at the time of travel must match the age group booked. Airlines have restrictions on people under 18 travelling alone.",
+      "Note2": "Age restrictions and policies for travelling with children may vary so please check with your airline before booking."
     }
   },
   "====================": "",

@@ -41,20 +41,26 @@ model Feedback {
  * =====================
  * = Airport Table
  * *****************************
+ * iata: 'AEA',
+ * icao: 'NGTB',
+ * name: 'Abemama Atoll Airport',
+ * location: 'Abemama Atoll, Kiribati',
+ * time: 'UTC+12:00',
+ * id: 'eyJlIjoiMTI5MDU0NDgyIiwicyI6IkFFQSIsImgiOiI4MTk3NjA0OSIsInQiOiJBSVJQT1JUIn0=',
+ * skyId: 'AEA'
  */
 
 model Airport {
   id        Int      @id @default(autoincrement())
+  iata      String   @unique
   name      String
-  iata_code String   @unique
-  icao_code String   @unique
-  country   String
+  location  String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   @@index([name])
-  @@index([iata_code])
-  @@index([country])
+  @@index([iata])
+  @@index([location])
 }
 
 /**

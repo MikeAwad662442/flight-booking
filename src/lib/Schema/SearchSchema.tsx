@@ -5,16 +5,15 @@
  * [X] ContactEmailSchema
  *******************************/
 import { z } from "zod";
-import {
-  date,
-  //NotRequiredString,
-  RequiredString,
-} from "./GlobalsSchema";
+import { NotRequiredDate, RequiredDate, RequiredString } from "./GlobalsSchema";
 export const SearchFlightSchema = z.object({
   FromAirport: RequiredString,
-  FromDate: date,
+  FromDate: RequiredDate,
   ToAirport: RequiredString,
-  ToDate: date.optional(),
+  ToDate: NotRequiredDate,
+  cabinClass: RequiredString,
+  children: RequiredString,
+  adults: RequiredString,
 });
 export type SearchFlightSchemaType = z.infer<typeof SearchFlightSchema>;
 /*******************************

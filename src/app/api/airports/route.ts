@@ -5,98 +5,115 @@
  * [-] Get Airport From db
  * [-]
  *
- *
+ * NEXT_PUBLIC_RAPIDAPI_KEY="b91d2affe6msh3711cb7bbee71aap131bfcjsnf9a862b2e1a9"
+ * NEXT_PUBLIC_RAPIDAPI_HOST="sky-scanner3.p.rapidapi.com"
+ * NEXT_PUBLIC_RAPIDAPI_URL="https://sky-scanner3.p.rapidapi.com/flights/"
  *******************************/
 
 "use server";
 import { prisma } from "@/lib/prisma";
-// import { SearchFlightSchema } from "@/lib/Schema/SearchSchema";
+import { SearchFlightSchema } from "@/lib/Schema/SearchSchema";
 import axios from "axios";
+// import { readFileSync } from "fs";
+import fs from "fs/promises";
+import path from "path";
 
-const validateAirportData = (airport: any) => {
-  return (
-    airport.iata_code &&
-    airport.icao_code &&
-    airport.airport_name &&
-    airport.country_name
-  );
+type AirportApi = {
+  iata: string;
+  name: string;
+  location: string;
 };
-
-const AirportApi = async () => {
+const urlRapidApi = process.env.NEXT_PUBLIC_RAPIDAPI_URL;
+/**
+ * iata: 'AEA',
+ * icao: 'NGTB',
+ * name: 'Abemama Atoll Airport',
+ * location: 'Abemama Atoll, Kiribati',
+ * time: 'UTC+12:00',
+ * id: 'eyJlIjoiMTI5MDU0NDgyIiwicyI6IkFFQSIsImgiOiI4MTk3NjA0OSIsInQiOiJBSVJQT1JUIn0=',
+ * skyId: 'AEA'
+ */
+const NewAirportDB = async () => {
   try {
-    const Response = await axios.get(
-      "http://api.aviationstack.com/v1/airports",
-      {
-        params: {
-          access_key: process.env.NEXT_AVIATIONSTACK_API_KEY,
-          limit: 1000,
-        },
-      },
-    );
-    const validAirports = Response.data.data.filter(
-      (a: any) =>
-        validateAirportData(a) &&
-        a.iata_code.length === 3 &&
-        a.icao_code.length === 4,
-    );
+    // === Get Full PATH === //
+    const projectRoot = process.cwd();
+    // console.log("projectRoot", projectRoot);
+    // === Join PATH  data file=== //
+    const airportsPath = path.join(projectRoot, "scripts", "airports.json");
+    // console.log("airportsPath", airportsPath);
 
-    // === save to db
+    // === Check the file === //
+    await fs.access(airportsPath, fs.constants.F_OK);
+
+    const rawData = await fs.readFile(airportsPath, "utf-8");
+
+    // === Check the JSON Data === //
+    const airportsData = JSON.parse(rawData) as AirportApi[];
+
+    if (!Array.isArray(airportsData)) {
+      throw new Error("Data must be arrayed");
+    }
+
+    console.log("airportsData :", airportsData.length);
     const chunkSize = 100;
-    for (let i = 0; i < validAirports.length; i += chunkSize) {
-      const chunk = validAirports.slice(i, i + chunkSize);
+    for (let i = 0; i < airportsData.length; i += chunkSize) {
+      const chunk = airportsData.slice(i, i + chunkSize);
 
+      // === send & save data to database === //
       await prisma.$transaction(async (tx) => {
         for (const airport of chunk) {
+          //  === Check if Airport Info is OK === //
+          if (!airport.iata || !airport.name || !airport.location) {
+            console.warn("Airport missing data:", airport);
+            continue;
+          }
           await tx.airport.upsert({
-            where: { iata_code: airport.iata_code },
+            where: { iata: airport.iata },
             update: {
-              name: airport.airport_name,
-              icao_code: airport.icao_code,
-              country: airport.country_name,
+              name: airport.name,
+              location: airport.location,
             },
             create: {
-              name: airport.airport_name,
-              iata_code: airport.iata_code,
-              icao_code: airport.icao_code,
-              country: airport.country_name,
+              iata: airport.iata,
+              name: airport.name,
+              location: airport.location,
             },
           });
         }
       });
     }
-
-    // console.log("add Airport No.", validAirports.length);
   } catch (error) {
-    // console.error("the error", error);
-    throw error;
+    console.error(error);
   }
 };
-
 const GetAirPort = async (data: string) => {
   try {
     const AirportName = await prisma.airport.count();
 
-    if (AirportName === 0) await AirportApi();
+    if (AirportName === 0) await NewAirportDB();
 
     const FindAirport = await prisma.airport.findMany({
       where: {
         OR: [
           { name: { contains: data } },
-          { iata_code: { contains: data } },
-          { country: { contains: data } },
+          { iata: { contains: data } },
+          { location: { contains: data } },
         ],
       },
+      select: {
+        iata: true,
+        name: true,
+        location: true,
+      },
+      take: 10,
     });
 
-    // console.log("data", data);
-    // console.log("AirportName", AirportName);
-    // console.log("FindAirport", FindAirport);
-    return FindAirport;
+    return { success: true, data: FindAirport };
   } catch (error) {
     return {
       issues: `the issues : ${error}`,
       message: "We did not find an airport with this name",
-      result: false,
+      success: false,
     };
   }
 };
@@ -105,38 +122,40 @@ const onSubmitSearchAction = async (data: FormData) => {
   const formData = Object.fromEntries(data);
   console.log("formData", formData);
   try {
-    // const GetFlight = SearchFlightSchema.safeParse(formData);
+    const Flight = SearchFlightSchema.safeParse(formData);
     // console.log("GetFlight", GetFlight);
-    // if (!GetFlight.success) {
-    //   return {
-    //     message: "An error occurred while processing the request",
-    //     issues: GetFlight.error.issues.map((issue) => issue.message),
-    //     result: false,
-    //   };
-    // }
+    if (!Flight.success) {
+      return {
+        message: "An error occurred while processing the request",
+        issues: Flight.error.issues.map((issue) => issue.message),
+        result: false,
+      };
+    }
 
-    const { FindAirport, FormData, ToAirport, ToDate } = formData.data;
-    const params = {
-      access_key: process.env.NEXT_AVIATIONSTACK_API_KEY,
-      dep_iata: FindAirport,
-      arr_iata: ToAirport,
-      flight_date: FormData,
-      limit: 50,
+    const { FromAirport, FromDate, ToAirport, ToDate } = Flight.data;
+    console.log("return Date", ToDate);
+    const options = {
+      method: "GET",
+      url: `${urlRapidApi}search-one-way`,
+      params: {
+        fromEntityId: FromAirport,
+        toEntityId: ToAirport,
+        yearMonth: FromDate,
+      },
+      headers: {
+        "x-rapidapi-key": process.env.NEXT_PUBLIC_RAPIDAPI_KEY,
+        "x-rapidapi-host": process.env.NEXT_PUBLIC_RAPIDAPI_URL,
+      },
     };
-    axios
-      .get("http://api.aviationstack.com/v1/flights", { params })
-      .then((response) => {
-        console.log(response.data.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+
+    try {
+      const GetFlight = await axios.request(options);
+      console.log(GetFlight.data);
+    } catch (error) {
+      console.error(error);
+    }
   } catch (error) {
-    return {
-      message: "An error occurred while processing the request",
-      issues: `the issues : ${error}`,
-      result: false,
-    };
+    console.log(error);
   }
 };
 
@@ -145,7 +164,6 @@ export { GetAirPort, onSubmitSearchAction };
 /*******************************
  * Notes:
  * =====================
- *
  *
  *
  *

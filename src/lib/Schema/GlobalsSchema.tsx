@@ -22,7 +22,7 @@ export const NumberStringSchema = z.coerce
     message: "Invalid number",
   }); // String => Number
 
-export const RequiredString = z.string().trim().min(2, "Required"); // For string Filed,
+export const RequiredString = z.string().trim().min(1, "Required"); // For string Filed,
 
 export const NotRequiredString = z.string().trim().optional(); // For string Filed
 
@@ -32,7 +32,18 @@ export const Email = RequiredString.email(
   "Please enter a valid email address.",
 ); // For Email
 
-export const date = z.date();
+// export const date = z.date();
+export const RequiredDate = z
+  .string()
+  .refine((value) => /^\d{4}-\d{2}-\d{2}$/.test(value), {
+    message: "YYYY-MM-DD",
+  });
+export const NotRequiredDate = z
+  .string()
+  .optional()
+  .refine((value) => !value || /^\d{4}-\d{2}-\d{2}$/.test(value), {
+    message: "YYYY-MM-DD",
+  });
 
 /*******************************
  * =====================

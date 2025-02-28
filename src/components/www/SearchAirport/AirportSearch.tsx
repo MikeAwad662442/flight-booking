@@ -6,84 +6,107 @@
  *******************************/
 "use client";
 import { GetAirPort } from "@/app/api/airports/route";
-import { useState, forwardRef, useMemo } from "react";
+import { useState, forwardRef, useMemo, useEffect } from "react";
 import { Input } from "../../ui/input";
 import { useTranslations } from "next-intl";
 
 type Airport = {
-  iata_code: string;
-  icao_code: string;
+  iata: string;
   name: string;
-  country: string;
+  location: string;
 };
 
 interface AirportSearchProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
+  value: string;
   onLocationSelected: (value: string) => void;
 }
 export default forwardRef<HTMLInputElement, AirportSearchProps>(
   function AirportSearch(
-    { onLocationSelected, ...props }: AirportSearchProps,
+    { value, onLocationSelected, ...props }: AirportSearchProps,
     ref,
   ) {
     const SearchT = useTranslations("Search.SearchComponent");
-    const [airportSearchInput, setAirportSearchInput] = useState("");
+    const [searchQuery, setSearchQuery] = useState("");
+    const [selectedAirport, setSelectedAirport] = useState("");
     const [results, setResults] = useState<Airport[]>([]);
     const [hasFocus, setHasFocus] = useState(false);
     // === Get Value From Form === //
-    // useMemo(() => {
-    //   setQuery(value);
-    // }, [value]);
+    useEffect(() => {
+      if (value && !selectedAirport) {
+        setSelectedAirport(value);
+      }
+    }, [value]);
 
     useMemo(() => {
       const FetchAirports = async () => {
-        if (!airportSearchInput.trim()) {
-          return [];
+        if (!searchQuery.trim()) {
+          setResults([]);
+          return;
         }
         try {
-          const data = await GetAirPort(airportSearchInput);
-          setResults(data);
-          // console.log("results : ", results);
+          const response = await GetAirPort(searchQuery);
+          if (response.success) {
+            setResults(response.data);
+          } else {
+            setResults([]);
+            console.error("Failed to fetch airports");
+          }
         } catch (error) {
           console.error("Error fetching airports:", error);
+          setResults([]);
         }
       };
 
       const debounceTimer = setTimeout(FetchAirports, 300);
       return () => clearTimeout(debounceTimer);
-    }, [airportSearchInput]);
+    }, [searchQuery]);
+
+    const handleSelect = (airport: Airport) => {
+      onLocationSelected(airport.iata);
+
+      setSelectedAirport(`${airport.name} (${airport.iata})`);
+
+      setSearchQuery("");
+      setResults([]);
+      setHasFocus(false);
+    };
 
     return (
       <div className="relative">
         <Input
           type="search"
           placeholder={SearchT("Placeholder")}
-          value={airportSearchInput}
-          onChange={(e) => setAirportSearchInput(e.target.value)}
+          value={hasFocus ? searchQuery : selectedAirport}
+          onChange={(e) => {
+            if (!hasFocus) setHasFocus(true);
+            setSearchQuery(e.target.value);
+          }}
           onFocus={() => setHasFocus(true)}
-          onBlur={() => setHasFocus(false)}
+          onBlur={() => setTimeout(() => setHasFocus(false), 200)}
           {...props}
           ref={ref}
+          className="w-72"
         />
 
-        {airportSearchInput.trim() && hasFocus && (
-          <div className="absolute z-10 mt-2 w-full divide-y rounded-lg rounded-b-lg border border-x border-b bg-white shadow-lg">
-            {!results.length && (
-              <p className="p-4 text-gray-500">{SearchT("Searching")}</p>
+        {hasFocus && searchQuery.trim() && (
+          <div className="absolute z-10 mt-2 w-[500px] divide-y rounded-lg rounded-b-lg border border-x border-b bg-white shadow-lg">
+            {results.length === 0 ? (
+              <p className="p-4 text-gray-500">{SearchT("NoResults")}</p>
+            ) : (
+              results.map((airport: Airport) => (
+                <button
+                  key={airport.iata}
+                  className="block w-full p-2 text-start text-primary"
+                  onMouseDown={(e) => {
+                    e.preventDefault();
+                    handleSelect(airport);
+                  }}
+                >
+                  {airport.name} - {airport.location}
+                </button>
+              ))
             )}
-            {results.map((airport: Airport) => (
-              <button
-                key={airport.iata_code}
-                className="block w-full p-2 text-start text-primary"
-                onMouseDown={(e) => {
-                  e.preventDefault();
-                  onLocationSelected(airport.iata_code);
-                  setAirportSearchInput("");
-                }}
-              >
-                {airport.name}-{airport.country}
-              </button>
-            ))}
           </div>
         )}
       </div>
