@@ -55,8 +55,8 @@
       "premium_economy": "Premium",
       "business": "Business",
       "first": "First",
-      "Adults": "Adults +12",
-      "Children": "Children 0-12",
+      "Adults": "Adults +12 and maximum 9 passengers",
+      "Children": "Children up to 12 years old and a maximum of 9 passengers",
       "Note1": "Your age at the time of travel must match the age group booked. Airlines have restrictions on people under 18 travelling alone.",
       "Note2": "Age restrictions and policies for travelling with children may vary so please check with your airline before booking."
     }

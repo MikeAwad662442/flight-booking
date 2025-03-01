@@ -42,11 +42,15 @@ import {
 } from "@/lib/Schema/SearchSchema";
 import { onSubmitSearchAction } from "@/app/api/airports/route";
 import DatePicker from "./DatePicker";
+import { PassengerSelector } from "./OtherInfo";
+import { useRouter } from "@/i18n/routing";
 
 // ===================== //
 // == React Hook Form == //
 const SearchBar = () => {
   const SearchBarT = useTranslations("Search.SearchBarComponent");
+  const router = useRouter();
+
   const SearchInfo = useForm<SearchFlightSchemaType>({
     resolver: zodResolver(SearchFlightSchema),
     defaultValues: {
@@ -64,7 +68,7 @@ const SearchBar = () => {
   const {
     handleSubmit,
     control,
-    getValues,
+    // getValues,
     formState: { isSubmitting },
   } = SearchInfo;
   // == React Hook Form == //
@@ -77,18 +81,45 @@ const SearchBar = () => {
       }
       const formData = new FormData();
       formData.append("FromAirport", values.FromAirport);
-      // formData.append("FromDate", format(values.FromDate, "yyyy-MM-dd"));
       formData.append("FromDate", values.FromDate);
       formData.append("ToAirport", values.ToAirport || "");
       if (values.ToDate) {
         formData.append("ToDate", values.ToDate);
       }
+      formData.append("cabinClass", values.cabinClass);
+      formData.append("adults", values.adults);
+      formData.append("children", values.children || "0");
 
-      const { message, success, issues } = await onSubmitSearchAction(formData);
+      // console.log("onSubmit", FormData);
+      const { message, success, data, issues } =
+        await onSubmitSearchAction(formData);
       if (success) {
+        // ===================== //
+        // == Remove Lod Data == //
+
+        localStorage.removeItem("SaveFormData");
+        localStorage.removeItem("flights");
+
+        // == Remove Lod Data == //
+        // ===================== //
+        // == Save FormData to localStorage == //
+
+        const SaveFormData = JSON.stringify(values);
+        localStorage.setItem("SaveFormData", SaveFormData);
+
+        // == Save FormData to localStorage == //
+        // ===================== //
+        // == Save Flight to localStorage == //
+
+        const flightsString = JSON.stringify(data);
+        localStorage.setItem("flights", flightsString);
+
+        // == Save Flight to localStorage == //
+        // ===================== //
         setTimeout(() => {
           toast.success(message);
-        }, 2000);
+          router.push("/flight-booking");
+        }, 1000);
       }
       toast.error(message, {
         description: issues,
@@ -98,16 +129,15 @@ const SearchBar = () => {
         description: error instanceof Error,
       });
     }
-    // console.log("onSubmit", formData);
   };
   return (
     <Form {...SearchInfo}>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Card className="mx-auto">
+        <Card className="mx-auto w-fit">
           <CardHeader>
             <CardTitle>{SearchBarT("Search")}</CardTitle>
           </CardHeader>
-          <CardContent className="flex flex-col items-start justify-start gap-4 md:flex-row">
+          <CardContent className="grid grid-cols-1 items-start justify-start gap-2 md:grid-cols-4">
             {/* From Airport: String inputType Text*/}
             <FormField
               control={control}
@@ -184,9 +214,10 @@ const SearchBar = () => {
                 </FormItem>
               )}
             />
+            <PassengerSelector />
           </CardContent>
           <CardFooter className="flex flex-col gap-4">
-            <p>{JSON.stringify(getValues())}</p>
+            {/* <p>{JSON.stringify(getValues())}</p> */}
             <Button className="w-full" type="submit" disabled={isSubmitting}>
               {isSubmitting ? "Submitting..." : "Submit"}
             </Button>

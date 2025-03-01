@@ -2,21 +2,18 @@
  * @author: Mike Awad
  * @description: Airport
  * =====================
- * [-] Get Airport From db
- * [-]
- *
- * NEXT_PUBLIC_RAPIDAPI_KEY="b91d2affe6msh3711cb7bbee71aap131bfcjsnf9a862b2e1a9"
- * NEXT_PUBLIC_RAPIDAPI_HOST="sky-scanner3.p.rapidapi.com"
- * NEXT_PUBLIC_RAPIDAPI_URL="https://sky-scanner3.p.rapidapi.com/flights/"
+ * [X] Get Airport From db
+ * [X] Get Flight From RAPIDAPI
+
  *******************************/
 
 "use server";
 import { prisma } from "@/lib/prisma";
 import { SearchFlightSchema } from "@/lib/Schema/SearchSchema";
 import axios from "axios";
-// import { readFileSync } from "fs";
 import fs from "fs/promises";
 import path from "path";
+import { ExtractFlights } from "./flight";
 
 type AirportApi = {
   iata: string;
@@ -33,6 +30,12 @@ const urlRapidApi = process.env.NEXT_PUBLIC_RAPIDAPI_URL;
  * id: 'eyJlIjoiMTI5MDU0NDgyIiwicyI6IkFFQSIsImgiOiI4MTk3NjA0OSIsInQiOiJBSVJQT1JUIn0=',
  * skyId: 'AEA'
  */
+
+/*******************************
+ * =====================
+ * = Get Airports from backUp JSON File
+ * =====================
+ *******************************/
 const NewAirportDB = async () => {
   try {
     // === Get Full PATH === //
@@ -44,7 +47,6 @@ const NewAirportDB = async () => {
 
     // === Check the file === //
     await fs.access(airportsPath, fs.constants.F_OK);
-
     const rawData = await fs.readFile(airportsPath, "utf-8");
 
     // === Check the JSON Data === //
@@ -54,7 +56,7 @@ const NewAirportDB = async () => {
       throw new Error("Data must be arrayed");
     }
 
-    console.log("airportsData :", airportsData.length);
+    // console.log("airportsData :", airportsData.length);
     const chunkSize = 100;
     for (let i = 0; i < airportsData.length; i += chunkSize) {
       const chunk = airportsData.slice(i, i + chunkSize);
@@ -64,7 +66,7 @@ const NewAirportDB = async () => {
         for (const airport of chunk) {
           //  === Check if Airport Info is OK === //
           if (!airport.iata || !airport.name || !airport.location) {
-            console.warn("Airport missing data:", airport);
+            // console.warn("Airport missing data:", airport);
             continue;
           }
           await tx.airport.upsert({
@@ -86,6 +88,14 @@ const NewAirportDB = async () => {
     console.error(error);
   }
 };
+
+/*******************************
+ * =====================
+ * = Get Airports from backUp JSON File
+ * =====================
+ * = Get Airport From DB
+ *******************************/
+
 const GetAirPort = async (data: string) => {
   try {
     const AirportName = await prisma.airport.count();
@@ -117,45 +127,94 @@ const GetAirPort = async (data: string) => {
     };
   }
 };
-
+/*******************************
+ * =====================
+ * = Get Airport From DB
+ * =====================
+ * = Get Airport From DB
+ *******************************/
 const onSubmitSearchAction = async (data: FormData) => {
-  const formData = Object.fromEntries(data);
-  console.log("formData", formData);
   try {
+    const formData = Object.fromEntries(data);
+    // console.log("formData", formData);
+
     const Flight = SearchFlightSchema.safeParse(formData);
-    // console.log("GetFlight", GetFlight);
+    // console.log("GetFlight", Flight);
+
     if (!Flight.success) {
       return {
+        success: false,
         message: "An error occurred while processing the request",
         issues: Flight.error.issues.map((issue) => issue.message),
-        result: false,
       };
     }
 
-    const { FromAirport, FromDate, ToAirport, ToDate } = Flight.data;
-    console.log("return Date", ToDate);
-    const options = {
-      method: "GET",
-      url: `${urlRapidApi}search-one-way`,
-      params: {
-        fromEntityId: FromAirport,
-        toEntityId: ToAirport,
-        yearMonth: FromDate,
-      },
-      headers: {
-        "x-rapidapi-key": process.env.NEXT_PUBLIC_RAPIDAPI_KEY,
-        "x-rapidapi-host": process.env.NEXT_PUBLIC_RAPIDAPI_URL,
-      },
-    };
+    const {
+      FromAirport,
+      FromDate,
+      ToAirport,
+      ToDate,
+      cabinClass,
+      children,
+      adults,
+    } = Flight.data;
+    // console.log("return Date", ToDate);
 
-    try {
-      const GetFlight = await axios.request(options);
-      console.log(GetFlight.data);
-    } catch (error) {
-      console.error(error);
+    let options;
+
+    if (!ToDate) {
+      options = {
+        method: "GET",
+        url: `${urlRapidApi}search-one-way`,
+        params: {
+          fromEntityId: FromAirport,
+          toEntityId: ToAirport,
+          departDate: FromDate,
+          cabinClass: cabinClass,
+          adults: adults,
+          children: children || "0",
+        },
+        headers: {
+          "x-rapidapi-key": process.env.NEXT_PUBLIC_RAPIDAPI_KEY,
+          "x-rapidapi-host": process.env.NEXT_PUBLIC_RAPIDAPI_HOST,
+        },
+      };
+    } else {
+      options = {
+        method: "GET",
+        url: `${urlRapidApi}search-roundtrip`,
+        params: {
+          fromEntityId: FromAirport,
+          toEntityId: ToAirport,
+          departDate: FromDate,
+          cabinClass: cabinClass,
+          adults: adults,
+          children: children || "0",
+        },
+        headers: {
+          "x-rapidapi-key": process.env.NEXT_PUBLIC_RAPIDAPI_KEY,
+          "x-rapidapi-host": process.env.NEXT_PUBLIC_RAPIDAPI_HOST,
+        },
+      };
     }
+
+    const GetFlight = await axios.request(options);
+    // console.log("GetFlight :", GetFlight.data);
+    // console.log("GetFlight itineraries:", GetFlight.data.itineraries);
+    const DataReceived = ExtractFlights(GetFlight.data);
+    // console.log("DataReceived", DataReceived);
+    return {
+      success: true,
+      message: "Flight data retrieved successfully",
+      data: DataReceived,
+    };
   } catch (error) {
-    console.log(error);
+    console.error(error);
+    return {
+      success: false,
+      message: "API request failed",
+      issues: [axios.isAxiosError(error) ? error.message : "Unknown error"],
+    };
   }
 };
 
@@ -164,7 +223,6 @@ export { GetAirPort, onSubmitSearchAction };
 /*******************************
  * Notes:
  * =====================
- *
  *
  *
  *

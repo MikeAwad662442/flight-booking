@@ -16,11 +16,7 @@ import { z } from "zod";
  * =====================
  *******************************/
 
-export const NumberStringSchema = z.coerce
-  .number()
-  .refine((val) => !isNaN(val), {
-    message: "Invalid number",
-  }); // String => Number
+export const NumberStringSchema = z.string().regex(/^[1-9]$/); // String => Number
 
 export const RequiredString = z.string().trim().min(1, "Required"); // For string Filed,
 
@@ -33,16 +29,15 @@ export const Email = RequiredString.email(
 ); // For Email
 
 // export const date = z.date();
-export const RequiredDate = z
-  .string()
-  .refine((value) => /^\d{4}-\d{2}-\d{2}$/.test(value), {
-    message: "YYYY-MM-DD",
-  });
+export const RequiredDate = z.string().date();
+// .refine((value) => /^\d{4}-\d{2}-\d{2}$/.test(value), {
+//   message: "yyyy-MM-dd",
+// });
 export const NotRequiredDate = z
   .string()
   .optional()
   .refine((value) => !value || /^\d{4}-\d{2}-\d{2}$/.test(value), {
-    message: "YYYY-MM-DD",
+    message: "yyyy-MM-dd",
   });
 
 /*******************************

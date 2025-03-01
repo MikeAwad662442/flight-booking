@@ -7,8 +7,8 @@
 "use client";
 import { GetAirPort } from "@/app/api/airports/route";
 import { useState, forwardRef, useMemo, useEffect } from "react";
-import { Input } from "../../ui/input";
 import { useTranslations } from "next-intl";
+import { Input } from "@/components/ui/input";
 
 type Airport = {
   iata: string;
@@ -47,7 +47,7 @@ export default forwardRef<HTMLInputElement, AirportSearchProps>(
         try {
           const response = await GetAirPort(searchQuery);
           if (response.success) {
-            setResults(response.data);
+            setResults(response.data ?? []);
           } else {
             setResults([]);
             console.error("Failed to fetch airports");
@@ -86,7 +86,7 @@ export default forwardRef<HTMLInputElement, AirportSearchProps>(
           onBlur={() => setTimeout(() => setHasFocus(false), 200)}
           {...props}
           ref={ref}
-          className="w-72"
+          className="w-64"
         />
 
         {hasFocus && searchQuery.trim() && (

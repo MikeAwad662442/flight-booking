@@ -42,10 +42,10 @@ const DatePicker = ({
   // === Processing date change === //
   const handleDateChange = (date?: Date) => {
     if (date) {
-      const adjustedDate = new Date(
-        Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()),
-      );
-      const formattedDate = format(adjustedDate, "yyyy-MM-dd");
+      // const adjustedDate = new Date(
+      //   Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()),
+      // );
+      const formattedDate = format(date, "yyyy-MM-dd");
       onChange(formattedDate);
     } else {
       onChange(undefined);
@@ -60,7 +60,7 @@ const DatePicker = ({
           <Button
             variant={"outline"}
             className={cn(
-              "w-72 pl-3 text-left font-normal",
+              "w-64 pl-3 text-left font-normal",
               !value && "text-muted-foreground",
             )}
           >
