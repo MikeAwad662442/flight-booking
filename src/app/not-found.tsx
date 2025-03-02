@@ -27,7 +27,7 @@ const GlobalNotFound = () => {
       <body>
         <main className="my-16 flex flex-col items-center justify-center gap-2">
           <Image
-            src={`/assets/Logo.png`}
+            src={`/assets/Logo.jpeg`}
             alt="LOGO"
             width={300}
             height={300}

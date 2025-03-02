@@ -1,19 +1,3 @@
-type Flight = {
-  Price: string;
-  AirLineLogo: string;
-  AirLineName: string;
-  Duration: number;
-  Stops: number;
-  Departure: string;
-  Arrival: string;
-  OriginDisplayCode: string;
-  OriginCity: string;
-  OriginCountry: string;
-  DestinationDisplayCode: string;
-  DestinationCity: string;
-  DestinationCountry: string;
-};
-
 /*******************************
  * =====================
  * = Type of Flight will be saved
@@ -21,14 +5,17 @@ type Flight = {
  * = The Data that received from API
  *******************************/
 
+import { FlightType } from "@/lib/Schema/SearchSchema";
+
 const ExtractFlights = (data: any) => {
   // console.log("extractFlights :", data);
-  const flights: Flight[] = [];
+  const flights: FlightType[] = [];
 
   if (data?.data?.itineraries) {
     for (const itinerary of data.data.itineraries) {
       const leg = itinerary.legs[0];
-      const flight: Flight = {
+      const flight: FlightType = {
+        id: itinerary.id,
         Price: itinerary.price.formatted,
         AirLineLogo: leg.carriers.marketing[0].logoUrl,
         AirLineName: leg.carriers.marketing[0].name,

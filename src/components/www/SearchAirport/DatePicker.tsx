@@ -55,7 +55,7 @@ const DatePicker = ({
     <Popover>
       <div className="flex flex-col space-y-2">
         {/* <label className="text-sm font-medium">{label}</label> */}
-        <FormLabel>{label}</FormLabel>
+        <FormLabel className="text-primary">{label}</FormLabel>
         <PopoverTrigger asChild>
           <Button
             variant={"outline"}

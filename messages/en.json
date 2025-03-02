@@ -27,10 +27,7 @@
       "P1": "Contact For Any Query"
     }
   },
-  "====================": "",
-  "_comment": "Home Page",
-  "====================": "",
-  "Home": {},
+
   "====================": "",
   "_comment": "Search Component",
   "====================": "",
@@ -60,6 +57,29 @@
       "Note1": "Your age at the time of travel must match the age group booked. Airlines have restrictions on people under 18 travelling alone.",
       "Note2": "Age restrictions and policies for travelling with children may vary so please check with your airline before booking."
     }
+  },
+  "====================": "",
+  "_comment": "Home Page",
+  "====================": "",
+  "Home": {},
+  "====================": "",
+  "_comment": "Flight Booking Page",
+  "====================": "",
+  "FlightBooking": {
+    "Error1": "You haven't searched for any flights yet.",
+    "Error2": "Sorry, there are no flights at the time you selected. Would you like to search for another time?",
+    "Button": "Choose the flight",
+    "FlightDetails": "Flight Details",
+    "Price": "Price",
+    "Airline": "Airline",
+    "SearchDetails": "Search Details",
+    "From": "From",
+    "To": "To",
+    "Date": "Date",
+    "Passengers": "Passengers",
+    "Adults": "Adults +12",
+    "Children": "Children",
+    "Cabin": "Cabin Class"
   },
   "====================": "",
   "_comment": "ContactUs Page",

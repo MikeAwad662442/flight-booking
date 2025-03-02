@@ -12,6 +12,9 @@ const nextConfig: NextConfig = {
       {
         hostname: "lh3.googleusercontent.com", // To allow user photos to appear in the app when sent along with other information when using Auth
       },
+      {
+        hostname: "logos.skyscnr.com", // To allow user photos to appear in the app when sent along with other information when using Auth
+      },
     ],
   },
   // experimental: {

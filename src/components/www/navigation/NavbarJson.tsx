@@ -43,15 +43,15 @@ export const NavLinksJson: NavBarItemsType[] = [
     href: "/flight-booking",
     label: "FlightBooking",
   },
-  {
-    href: "/our-services",
-    label: "OurServices",
-  },
+  // {
+  //   href: "/our-services",
+  //   label: "OurServices",
+  // },
 
-  {
-    href: "/about-us",
-    label: "AboutUs",
-  },
+  // {
+  //   href: "/about-us",
+  //   label: "AboutUs",
+  // },
   {
     href: "/contact-us",
     label: "ContactUs",

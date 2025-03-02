@@ -42,11 +42,16 @@ const Footer = async () => {
   const FooterT = await getTranslations("Navbar");
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-sidebar flex w-full flex-col items-center justify-between px-8 pb-8 pt-16 text-primary">
+    <footer className="flex w-full flex-col items-center justify-between bg-accent-foreground px-8 pb-8 pt-16 text-primary">
       <section className="grid grid-cols-1 items-start justify-center gap-8 md:grid-cols-2 lg:grid-cols-4">
         {/* Logo - Info - SocialMediaJson */}
         <div className="flex flex-col items-start justify-start gap-8">
-          <Image src={`/assets/Logo.png`} alt="Logo" width={213} height={105} />
+          <Image
+            src={`/assets/Logo.jpeg`}
+            alt="Logo"
+            width={213}
+            height={105}
+          />
           <p className="break-all">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Consequuntur, accusantium!
@@ -66,7 +71,7 @@ const Footer = async () => {
           </ul>
         </div>
         {/* Company Links */}
-        <div className="flex flex-col items-center justify-start gap-4">
+        <div className="flex flex-col items-start justify-start gap-4 md:items-center">
           <h2 className="font-bold text-chart-5">{FooterT("Company")}</h2>
           <ul className="flex flex-col items-start justify-start gap-4">
             {NavLinksJson.map((Items: NavBarItemsType) => (

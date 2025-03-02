@@ -29,9 +29,18 @@ npm i next-intl react-hook-form zod @hookform/resolvers @auth/prisma-adapter @pr
 npm i -D eslint-config-prettier prettier prettier-plugin-tailwindcss prisma
 ```
 
-✅ الفرونت إند:
+the API i use
+https://rapidapi.com/ntd119/api/sky-scanner3
+in .env file add this info
 
-- تصميم واجهة حجز التذاكر.
-- عرض الرحلات المتاحة بطريقة منظمة وسهلة الاستخدام.
-- نموذج إدخال بيانات الركاب والدفع.
-- تجربة مستخدم سلسة عبر الأجهزة المختلفة.
+# ======================
+
+# === Connect DataBase
+
+DATABASE_URL="file:./../db/DB.sqlite"
+
+# ======================
+
+NEXT_PUBLIC_RAPIDAPI_KEY="the key from API"
+NEXT_PUBLIC_RAPIDAPI_HOST="sky-scanner3.p.rapidapi.com"
+NEXT_PUBLIC_RAPIDAPI_URL="https://sky-scanner3.p.rapidapi.com/flights/"

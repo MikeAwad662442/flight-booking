@@ -1,0 +1,2041 @@
+{
+  "data": {
+    "context": {
+      "status": "incomplete",
+      "sessionId": "Cl0IARJZCk4KJGY0YzY5MzExLTJlMzgtNGYxNC05MmY2LTA1ZjM5OTMyMTYzNBACGiQyNDFhNjY1My02OTFlLTQyZGEtYjQ4ZC1jYmRhOTM0ODdlOTQQg_u9vtUyGAESKHVzc18yZTlmODVkOC00MmU5LTRjY2MtYWFhNi0zNGRiMzU1MGVjMzMiAlVT",
+      "totalResults": 10
+    },
+    "itineraries": [
+      {
+        "id": "9834-2503180720--32062-0-11182-2503181230|11182-2503311245--32062-0-9834-2503311505",
+        "price": {
+          "raw": 403.0,
+          "formatted": "$403",
+          "pricingOptionId": "qzdHpYi-wAQQ"
+        },
+        "legs": [
+          {
+            "id": "9834-2503180720--32062-0-11182-2503181230",
+            "origin": {
+              "id": "BEY",
+              "entityId": "128667319",
+              "name": "Beirut",
+              "displayCode": "BEY",
+              "city": "Beirut",
+              "country": "Lebanon",
+              "isHighlighted": false
+            },
+            "destination": {
+              "id": "DXB",
+              "entityId": "95673506",
+              "name": "Dubai",
+              "displayCode": "DXB",
+              "city": "Dubai",
+              "country": "United Arab Emirates",
+              "isHighlighted": false
+            },
+            "durationInMinutes": 190,
+            "stopCount": 0,
+            "isSmallestStops": false,
+            "departure": "2025-03-18T07:20:00",
+            "arrival": "2025-03-18T12:30:00",
+            "timeDeltaInDays": 0,
+            "carriers": {
+              "marketing": [
+                {
+                  "id": -32062,
+                  "alternateId": "ME",
+                  "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/ME.png",
+                  "name": "MEA"
+                }
+              ],
+              "operationType": "fully_operated"
+            },
+            "segments": [
+              {
+                "id": "9834-11182-2503180720-2503181230--32062",
+                "origin": {
+                  "flightPlaceId": "BEY",
+                  "displayCode": "BEY",
+                  "parent": {
+                    "flightPlaceId": "BEIR",
+                    "displayCode": "BEY",
+                    "name": "Beirut",
+                    "type": "City"
+                  },
+                  "name": "Beirut",
+                  "type": "Airport",
+                  "country": "Lebanon"
+                },
+                "destination": {
+                  "flightPlaceId": "DXB",
+                  "displayCode": "DXB",
+                  "parent": {
+                    "flightPlaceId": "DXBA",
+                    "displayCode": "DXB",
+                    "name": "Dubai",
+                    "type": "City"
+                  },
+                  "name": "Dubai",
+                  "type": "Airport",
+                  "country": "United Arab Emirates"
+                },
+                "departure": "2025-03-18T07:20:00",
+                "arrival": "2025-03-18T12:30:00",
+                "durationInMinutes": 190,
+                "flightNumber": "426",
+                "marketingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                },
+                "operatingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                }
+              }
+            ]
+          },
+          {
+            "id": "11182-2503311245--32062-0-9834-2503311505",
+            "origin": {
+              "id": "DXB",
+              "entityId": "95673506",
+              "name": "Dubai",
+              "displayCode": "DXB",
+              "city": "Dubai",
+              "country": "United Arab Emirates",
+              "isHighlighted": false
+            },
+            "destination": {
+              "id": "BEY",
+              "entityId": "128667319",
+              "name": "Beirut",
+              "displayCode": "BEY",
+              "city": "Beirut",
+              "country": "Lebanon",
+              "isHighlighted": false
+            },
+            "durationInMinutes": 200,
+            "stopCount": 0,
+            "isSmallestStops": false,
+            "departure": "2025-03-31T12:45:00",
+            "arrival": "2025-03-31T15:05:00",
+            "timeDeltaInDays": 0,
+            "carriers": {
+              "marketing": [
+                {
+                  "id": -32062,
+                  "alternateId": "ME",
+                  "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/ME.png",
+                  "name": "MEA"
+                }
+              ],
+              "operationType": "fully_operated"
+            },
+            "segments": [
+              {
+                "id": "11182-9834-2503311245-2503311505--32062",
+                "origin": {
+                  "flightPlaceId": "DXB",
+                  "displayCode": "DXB",
+                  "parent": {
+                    "flightPlaceId": "DXBA",
+                    "displayCode": "DXB",
+                    "name": "Dubai",
+                    "type": "City"
+                  },
+                  "name": "Dubai",
+                  "type": "Airport",
+                  "country": "United Arab Emirates"
+                },
+                "destination": {
+                  "flightPlaceId": "BEY",
+                  "displayCode": "BEY",
+                  "parent": {
+                    "flightPlaceId": "BEIR",
+                    "displayCode": "BEY",
+                    "name": "Beirut",
+                    "type": "City"
+                  },
+                  "name": "Beirut",
+                  "type": "Airport",
+                  "country": "Lebanon"
+                },
+                "departure": "2025-03-31T12:45:00",
+                "arrival": "2025-03-31T15:05:00",
+                "durationInMinutes": 200,
+                "flightNumber": "427",
+                "marketingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                },
+                "operatingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                }
+              }
+            ]
+          }
+        ],
+        "isSelfTransfer": false,
+        "isProtectedSelfTransfer": false,
+        "farePolicy": {
+          "isChangeAllowed": false,
+          "isPartiallyChangeable": false,
+          "isCancellationAllowed": false,
+          "isPartiallyRefundable": false
+        },
+        "eco": { "ecoContenderDelta": 14.500809 },
+        "fareAttributes": {},
+        "tags": ["cheapest", "third_shortest"],
+        "isMashUp": false,
+        "hasFlexibleOptions": false,
+        "score": 0.999
+      },
+      {
+        "id": "9834-2503181615--32062-0-11182-2503182125|11182-2503311245--32062-0-9834-2503311505",
+        "price": {
+          "raw": 422.99,
+          "formatted": "$423",
+          "pricingOptionId": "dzcGtLklbS7t"
+        },
+        "legs": [
+          {
+            "id": "9834-2503181615--32062-0-11182-2503182125",
+            "origin": {
+              "id": "BEY",
+              "entityId": "128667319",
+              "name": "Beirut",
+              "displayCode": "BEY",
+              "city": "Beirut",
+              "country": "Lebanon",
+              "isHighlighted": false
+            },
+            "destination": {
+              "id": "DXB",
+              "entityId": "95673506",
+              "name": "Dubai",
+              "displayCode": "DXB",
+              "city": "Dubai",
+              "country": "United Arab Emirates",
+              "isHighlighted": false
+            },
+            "durationInMinutes": 190,
+            "stopCount": 0,
+            "isSmallestStops": false,
+            "departure": "2025-03-18T16:15:00",
+            "arrival": "2025-03-18T21:25:00",
+            "timeDeltaInDays": 0,
+            "carriers": {
+              "marketing": [
+                {
+                  "id": -32062,
+                  "alternateId": "ME",
+                  "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/ME.png",
+                  "name": "MEA"
+                }
+              ],
+              "operationType": "fully_operated"
+            },
+            "segments": [
+              {
+                "id": "9834-11182-2503181615-2503182125--32062",
+                "origin": {
+                  "flightPlaceId": "BEY",
+                  "displayCode": "BEY",
+                  "parent": {
+                    "flightPlaceId": "BEIR",
+                    "displayCode": "BEY",
+                    "name": "Beirut",
+                    "type": "City"
+                  },
+                  "name": "Beirut",
+                  "type": "Airport",
+                  "country": "Lebanon"
+                },
+                "destination": {
+                  "flightPlaceId": "DXB",
+                  "displayCode": "DXB",
+                  "parent": {
+                    "flightPlaceId": "DXBA",
+                    "displayCode": "DXB",
+                    "name": "Dubai",
+                    "type": "City"
+                  },
+                  "name": "Dubai",
+                  "type": "Airport",
+                  "country": "United Arab Emirates"
+                },
+                "departure": "2025-03-18T16:15:00",
+                "arrival": "2025-03-18T21:25:00",
+                "durationInMinutes": 190,
+                "flightNumber": "428",
+                "marketingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                },
+                "operatingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                }
+              }
+            ]
+          },
+          {
+            "id": "11182-2503311245--32062-0-9834-2503311505",
+            "origin": {
+              "id": "DXB",
+              "entityId": "95673506",
+              "name": "Dubai",
+              "displayCode": "DXB",
+              "city": "Dubai",
+              "country": "United Arab Emirates",
+              "isHighlighted": false
+            },
+            "destination": {
+              "id": "BEY",
+              "entityId": "128667319",
+              "name": "Beirut",
+              "displayCode": "BEY",
+              "city": "Beirut",
+              "country": "Lebanon",
+              "isHighlighted": false
+            },
+            "durationInMinutes": 200,
+            "stopCount": 0,
+            "isSmallestStops": false,
+            "departure": "2025-03-31T12:45:00",
+            "arrival": "2025-03-31T15:05:00",
+            "timeDeltaInDays": 0,
+            "carriers": {
+              "marketing": [
+                {
+                  "id": -32062,
+                  "alternateId": "ME",
+                  "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/ME.png",
+                  "name": "MEA"
+                }
+              ],
+              "operationType": "fully_operated"
+            },
+            "segments": [
+              {
+                "id": "11182-9834-2503311245-2503311505--32062",
+                "origin": {
+                  "flightPlaceId": "DXB",
+                  "displayCode": "DXB",
+                  "parent": {
+                    "flightPlaceId": "DXBA",
+                    "displayCode": "DXB",
+                    "name": "Dubai",
+                    "type": "City"
+                  },
+                  "name": "Dubai",
+                  "type": "Airport",
+                  "country": "United Arab Emirates"
+                },
+                "destination": {
+                  "flightPlaceId": "BEY",
+                  "displayCode": "BEY",
+                  "parent": {
+                    "flightPlaceId": "BEIR",
+                    "displayCode": "BEY",
+                    "name": "Beirut",
+                    "type": "City"
+                  },
+                  "name": "Beirut",
+                  "type": "Airport",
+                  "country": "Lebanon"
+                },
+                "departure": "2025-03-31T12:45:00",
+                "arrival": "2025-03-31T15:05:00",
+                "durationInMinutes": 200,
+                "flightNumber": "427",
+                "marketingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                },
+                "operatingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                }
+              }
+            ]
+          }
+        ],
+        "isSelfTransfer": false,
+        "isProtectedSelfTransfer": false,
+        "farePolicy": {
+          "isChangeAllowed": false,
+          "isPartiallyChangeable": false,
+          "isCancellationAllowed": false,
+          "isPartiallyRefundable": false
+        },
+        "eco": { "ecoContenderDelta": 14.500809 },
+        "fareAttributes": {},
+        "tags": ["second_cheapest"],
+        "isMashUp": false,
+        "hasFlexibleOptions": false,
+        "score": 0.842241
+      },
+      {
+        "id": "9834-2503182100--32062-0-11182-2503190210|11182-2503311245--32062-0-9834-2503311505",
+        "price": {
+          "raw": 403.0,
+          "formatted": "$403",
+          "pricingOptionId": "zESABxW8bGdp"
+        },
+        "legs": [
+          {
+            "id": "9834-2503182100--32062-0-11182-2503190210",
+            "origin": {
+              "id": "BEY",
+              "entityId": "128667319",
+              "name": "Beirut",
+              "displayCode": "BEY",
+              "city": "Beirut",
+              "country": "Lebanon",
+              "isHighlighted": false
+            },
+            "destination": {
+              "id": "DXB",
+              "entityId": "95673506",
+              "name": "Dubai",
+              "displayCode": "DXB",
+              "city": "Dubai",
+              "country": "United Arab Emirates",
+              "isHighlighted": false
+            },
+            "durationInMinutes": 190,
+            "stopCount": 0,
+            "isSmallestStops": false,
+            "departure": "2025-03-18T21:00:00",
+            "arrival": "2025-03-19T02:10:00",
+            "timeDeltaInDays": 1,
+            "carriers": {
+              "marketing": [
+                {
+                  "id": -32062,
+                  "alternateId": "ME",
+                  "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/ME.png",
+                  "name": "MEA"
+                }
+              ],
+              "operationType": "fully_operated"
+            },
+            "segments": [
+              {
+                "id": "9834-11182-2503182100-2503190210--32062",
+                "origin": {
+                  "flightPlaceId": "BEY",
+                  "displayCode": "BEY",
+                  "parent": {
+                    "flightPlaceId": "BEIR",
+                    "displayCode": "BEY",
+                    "name": "Beirut",
+                    "type": "City"
+                  },
+                  "name": "Beirut",
+                  "type": "Airport",
+                  "country": "Lebanon"
+                },
+                "destination": {
+                  "flightPlaceId": "DXB",
+                  "displayCode": "DXB",
+                  "parent": {
+                    "flightPlaceId": "DXBA",
+                    "displayCode": "DXB",
+                    "name": "Dubai",
+                    "type": "City"
+                  },
+                  "name": "Dubai",
+                  "type": "Airport",
+                  "country": "United Arab Emirates"
+                },
+                "departure": "2025-03-18T21:00:00",
+                "arrival": "2025-03-19T02:10:00",
+                "durationInMinutes": 190,
+                "flightNumber": "430",
+                "marketingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                },
+                "operatingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                }
+              }
+            ]
+          },
+          {
+            "id": "11182-2503311245--32062-0-9834-2503311505",
+            "origin": {
+              "id": "DXB",
+              "entityId": "95673506",
+              "name": "Dubai",
+              "displayCode": "DXB",
+              "city": "Dubai",
+              "country": "United Arab Emirates",
+              "isHighlighted": false
+            },
+            "destination": {
+              "id": "BEY",
+              "entityId": "128667319",
+              "name": "Beirut",
+              "displayCode": "BEY",
+              "city": "Beirut",
+              "country": "Lebanon",
+              "isHighlighted": false
+            },
+            "durationInMinutes": 200,
+            "stopCount": 0,
+            "isSmallestStops": false,
+            "departure": "2025-03-31T12:45:00",
+            "arrival": "2025-03-31T15:05:00",
+            "timeDeltaInDays": 0,
+            "carriers": {
+              "marketing": [
+                {
+                  "id": -32062,
+                  "alternateId": "ME",
+                  "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/ME.png",
+                  "name": "MEA"
+                }
+              ],
+              "operationType": "fully_operated"
+            },
+            "segments": [
+              {
+                "id": "11182-9834-2503311245-2503311505--32062",
+                "origin": {
+                  "flightPlaceId": "DXB",
+                  "displayCode": "DXB",
+                  "parent": {
+                    "flightPlaceId": "DXBA",
+                    "displayCode": "DXB",
+                    "name": "Dubai",
+                    "type": "City"
+                  },
+                  "name": "Dubai",
+                  "type": "Airport",
+                  "country": "United Arab Emirates"
+                },
+                "destination": {
+                  "flightPlaceId": "BEY",
+                  "displayCode": "BEY",
+                  "parent": {
+                    "flightPlaceId": "BEIR",
+                    "displayCode": "BEY",
+                    "name": "Beirut",
+                    "type": "City"
+                  },
+                  "name": "Beirut",
+                  "type": "Airport",
+                  "country": "Lebanon"
+                },
+                "departure": "2025-03-31T12:45:00",
+                "arrival": "2025-03-31T15:05:00",
+                "durationInMinutes": 200,
+                "flightNumber": "427",
+                "marketingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                },
+                "operatingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                }
+              }
+            ]
+          }
+        ],
+        "isSelfTransfer": false,
+        "isProtectedSelfTransfer": false,
+        "farePolicy": {
+          "isChangeAllowed": false,
+          "isPartiallyChangeable": false,
+          "isCancellationAllowed": false,
+          "isPartiallyRefundable": false
+        },
+        "fareAttributes": {},
+        "tags": ["cheapest", "third_shortest"],
+        "isMashUp": false,
+        "hasFlexibleOptions": false,
+        "score": 0.720488
+      },
+      {
+        "id": "9834-2503180720--32062-0-11182-2503181230|11182-2503312140--32062-0-9834-2503312359",
+        "price": {
+          "raw": 426.99,
+          "formatted": "$427",
+          "pricingOptionId": "t_VOHxbDcvHi"
+        },
+        "legs": [
+          {
+            "id": "9834-2503180720--32062-0-11182-2503181230",
+            "origin": {
+              "id": "BEY",
+              "entityId": "128667319",
+              "name": "Beirut",
+              "displayCode": "BEY",
+              "city": "Beirut",
+              "country": "Lebanon",
+              "isHighlighted": false
+            },
+            "destination": {
+              "id": "DXB",
+              "entityId": "95673506",
+              "name": "Dubai",
+              "displayCode": "DXB",
+              "city": "Dubai",
+              "country": "United Arab Emirates",
+              "isHighlighted": false
+            },
+            "durationInMinutes": 190,
+            "stopCount": 0,
+            "isSmallestStops": false,
+            "departure": "2025-03-18T07:20:00",
+            "arrival": "2025-03-18T12:30:00",
+            "timeDeltaInDays": 0,
+            "carriers": {
+              "marketing": [
+                {
+                  "id": -32062,
+                  "alternateId": "ME",
+                  "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/ME.png",
+                  "name": "MEA"
+                }
+              ],
+              "operationType": "fully_operated"
+            },
+            "segments": [
+              {
+                "id": "9834-11182-2503180720-2503181230--32062",
+                "origin": {
+                  "flightPlaceId": "BEY",
+                  "displayCode": "BEY",
+                  "parent": {
+                    "flightPlaceId": "BEIR",
+                    "displayCode": "BEY",
+                    "name": "Beirut",
+                    "type": "City"
+                  },
+                  "name": "Beirut",
+                  "type": "Airport",
+                  "country": "Lebanon"
+                },
+                "destination": {
+                  "flightPlaceId": "DXB",
+                  "displayCode": "DXB",
+                  "parent": {
+                    "flightPlaceId": "DXBA",
+                    "displayCode": "DXB",
+                    "name": "Dubai",
+                    "type": "City"
+                  },
+                  "name": "Dubai",
+                  "type": "Airport",
+                  "country": "United Arab Emirates"
+                },
+                "departure": "2025-03-18T07:20:00",
+                "arrival": "2025-03-18T12:30:00",
+                "durationInMinutes": 190,
+                "flightNumber": "426",
+                "marketingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                },
+                "operatingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                }
+              }
+            ]
+          },
+          {
+            "id": "11182-2503312140--32062-0-9834-2503312359",
+            "origin": {
+              "id": "DXB",
+              "entityId": "95673506",
+              "name": "Dubai",
+              "displayCode": "DXB",
+              "city": "Dubai",
+              "country": "United Arab Emirates",
+              "isHighlighted": false
+            },
+            "destination": {
+              "id": "BEY",
+              "entityId": "128667319",
+              "name": "Beirut",
+              "displayCode": "BEY",
+              "city": "Beirut",
+              "country": "Lebanon",
+              "isHighlighted": false
+            },
+            "durationInMinutes": 199,
+            "stopCount": 0,
+            "isSmallestStops": false,
+            "departure": "2025-03-31T21:40:00",
+            "arrival": "2025-03-31T23:59:00",
+            "timeDeltaInDays": 0,
+            "carriers": {
+              "marketing": [
+                {
+                  "id": -32062,
+                  "alternateId": "ME",
+                  "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/ME.png",
+                  "name": "MEA"
+                }
+              ],
+              "operationType": "fully_operated"
+            },
+            "segments": [
+              {
+                "id": "11182-9834-2503312140-2503312359--32062",
+                "origin": {
+                  "flightPlaceId": "DXB",
+                  "displayCode": "DXB",
+                  "parent": {
+                    "flightPlaceId": "DXBA",
+                    "displayCode": "DXB",
+                    "name": "Dubai",
+                    "type": "City"
+                  },
+                  "name": "Dubai",
+                  "type": "Airport",
+                  "country": "United Arab Emirates"
+                },
+                "destination": {
+                  "flightPlaceId": "BEY",
+                  "displayCode": "BEY",
+                  "parent": {
+                    "flightPlaceId": "BEIR",
+                    "displayCode": "BEY",
+                    "name": "Beirut",
+                    "type": "City"
+                  },
+                  "name": "Beirut",
+                  "type": "Airport",
+                  "country": "Lebanon"
+                },
+                "departure": "2025-03-31T21:40:00",
+                "arrival": "2025-03-31T23:59:00",
+                "durationInMinutes": 199,
+                "flightNumber": "429",
+                "marketingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                },
+                "operatingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                }
+              }
+            ]
+          }
+        ],
+        "isSelfTransfer": false,
+        "isProtectedSelfTransfer": false,
+        "farePolicy": {
+          "isChangeAllowed": false,
+          "isPartiallyChangeable": false,
+          "isCancellationAllowed": false,
+          "isPartiallyRefundable": false
+        },
+        "eco": { "ecoContenderDelta": 9.921349 },
+        "fareAttributes": {},
+        "tags": ["third_cheapest", "shortest"],
+        "isMashUp": false,
+        "hasFlexibleOptions": false,
+        "score": 0.63419
+      },
+      {
+        "id": "9834-2503180720--32062-0-11182-2503181230|11182-2503310215--32062-0-9834-2503310435",
+        "price": {
+          "raw": 426.99,
+          "formatted": "$427",
+          "pricingOptionId": "xqRV9r4ugPqf"
+        },
+        "legs": [
+          {
+            "id": "9834-2503180720--32062-0-11182-2503181230",
+            "origin": {
+              "id": "BEY",
+              "entityId": "128667319",
+              "name": "Beirut",
+              "displayCode": "BEY",
+              "city": "Beirut",
+              "country": "Lebanon",
+              "isHighlighted": false
+            },
+            "destination": {
+              "id": "DXB",
+              "entityId": "95673506",
+              "name": "Dubai",
+              "displayCode": "DXB",
+              "city": "Dubai",
+              "country": "United Arab Emirates",
+              "isHighlighted": false
+            },
+            "durationInMinutes": 190,
+            "stopCount": 0,
+            "isSmallestStops": false,
+            "departure": "2025-03-18T07:20:00",
+            "arrival": "2025-03-18T12:30:00",
+            "timeDeltaInDays": 0,
+            "carriers": {
+              "marketing": [
+                {
+                  "id": -32062,
+                  "alternateId": "ME",
+                  "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/ME.png",
+                  "name": "MEA"
+                }
+              ],
+              "operationType": "fully_operated"
+            },
+            "segments": [
+              {
+                "id": "9834-11182-2503180720-2503181230--32062",
+                "origin": {
+                  "flightPlaceId": "BEY",
+                  "displayCode": "BEY",
+                  "parent": {
+                    "flightPlaceId": "BEIR",
+                    "displayCode": "BEY",
+                    "name": "Beirut",
+                    "type": "City"
+                  },
+                  "name": "Beirut",
+                  "type": "Airport",
+                  "country": "Lebanon"
+                },
+                "destination": {
+                  "flightPlaceId": "DXB",
+                  "displayCode": "DXB",
+                  "parent": {
+                    "flightPlaceId": "DXBA",
+                    "displayCode": "DXB",
+                    "name": "Dubai",
+                    "type": "City"
+                  },
+                  "name": "Dubai",
+                  "type": "Airport",
+                  "country": "United Arab Emirates"
+                },
+                "departure": "2025-03-18T07:20:00",
+                "arrival": "2025-03-18T12:30:00",
+                "durationInMinutes": 190,
+                "flightNumber": "426",
+                "marketingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                },
+                "operatingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                }
+              }
+            ]
+          },
+          {
+            "id": "11182-2503310215--32062-0-9834-2503310435",
+            "origin": {
+              "id": "DXB",
+              "entityId": "95673506",
+              "name": "Dubai",
+              "displayCode": "DXB",
+              "city": "Dubai",
+              "country": "United Arab Emirates",
+              "isHighlighted": false
+            },
+            "destination": {
+              "id": "BEY",
+              "entityId": "128667319",
+              "name": "Beirut",
+              "displayCode": "BEY",
+              "city": "Beirut",
+              "country": "Lebanon",
+              "isHighlighted": false
+            },
+            "durationInMinutes": 200,
+            "stopCount": 0,
+            "isSmallestStops": false,
+            "departure": "2025-03-31T02:15:00",
+            "arrival": "2025-03-31T04:35:00",
+            "timeDeltaInDays": 0,
+            "carriers": {
+              "marketing": [
+                {
+                  "id": -32062,
+                  "alternateId": "ME",
+                  "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/ME.png",
+                  "name": "MEA"
+                }
+              ],
+              "operationType": "fully_operated"
+            },
+            "segments": [
+              {
+                "id": "11182-9834-2503310215-2503310435--32062",
+                "origin": {
+                  "flightPlaceId": "DXB",
+                  "displayCode": "DXB",
+                  "parent": {
+                    "flightPlaceId": "DXBA",
+                    "displayCode": "DXB",
+                    "name": "Dubai",
+                    "type": "City"
+                  },
+                  "name": "Dubai",
+                  "type": "Airport",
+                  "country": "United Arab Emirates"
+                },
+                "destination": {
+                  "flightPlaceId": "BEY",
+                  "displayCode": "BEY",
+                  "parent": {
+                    "flightPlaceId": "BEIR",
+                    "displayCode": "BEY",
+                    "name": "Beirut",
+                    "type": "City"
+                  },
+                  "name": "Beirut",
+                  "type": "Airport",
+                  "country": "Lebanon"
+                },
+                "departure": "2025-03-31T02:15:00",
+                "arrival": "2025-03-31T04:35:00",
+                "durationInMinutes": 200,
+                "flightNumber": "431",
+                "marketingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                },
+                "operatingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                }
+              }
+            ]
+          }
+        ],
+        "isSelfTransfer": false,
+        "isProtectedSelfTransfer": false,
+        "farePolicy": {
+          "isChangeAllowed": false,
+          "isPartiallyChangeable": false,
+          "isCancellationAllowed": false,
+          "isPartiallyRefundable": false
+        },
+        "fareAttributes": {},
+        "isMashUp": false,
+        "hasFlexibleOptions": false,
+        "score": 0.575696
+      },
+      {
+        "id": "9834-2503181115--32301-0-11182-2503181655|11182-2503311850--32301-0-9834-2503312200",
+        "price": {
+          "raw": 510.57,
+          "formatted": "$511",
+          "pricingOptionId": "_LoZq94cEFql"
+        },
+        "legs": [
+          {
+            "id": "9834-2503181115--32301-0-11182-2503181655",
+            "origin": {
+              "id": "BEY",
+              "entityId": "128667319",
+              "name": "Beirut",
+              "displayCode": "BEY",
+              "city": "Beirut",
+              "country": "Lebanon",
+              "isHighlighted": false
+            },
+            "destination": {
+              "id": "DXB",
+              "entityId": "95673506",
+              "name": "Dubai",
+              "displayCode": "DXB",
+              "city": "Dubai",
+              "country": "United Arab Emirates",
+              "isHighlighted": false
+            },
+            "durationInMinutes": 220,
+            "stopCount": 0,
+            "isSmallestStops": false,
+            "departure": "2025-03-18T11:15:00",
+            "arrival": "2025-03-18T16:55:00",
+            "timeDeltaInDays": 0,
+            "carriers": {
+              "marketing": [
+                {
+                  "id": -32301,
+                  "alternateId": "FZ",
+                  "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/FZ.png",
+                  "name": "flydubai"
+                }
+              ],
+              "operationType": "fully_operated"
+            },
+            "segments": [
+              {
+                "id": "9834-11182-2503181115-2503181655--32301",
+                "origin": {
+                  "flightPlaceId": "BEY",
+                  "displayCode": "BEY",
+                  "parent": {
+                    "flightPlaceId": "BEIR",
+                    "displayCode": "BEY",
+                    "name": "Beirut",
+                    "type": "City"
+                  },
+                  "name": "Beirut",
+                  "type": "Airport",
+                  "country": "Lebanon"
+                },
+                "destination": {
+                  "flightPlaceId": "DXB",
+                  "displayCode": "DXB",
+                  "parent": {
+                    "flightPlaceId": "DXBA",
+                    "displayCode": "DXB",
+                    "name": "Dubai",
+                    "type": "City"
+                  },
+                  "name": "Dubai",
+                  "type": "Airport",
+                  "country": "United Arab Emirates"
+                },
+                "departure": "2025-03-18T11:15:00",
+                "arrival": "2025-03-18T16:55:00",
+                "durationInMinutes": 220,
+                "flightNumber": "158",
+                "marketingCarrier": {
+                  "id": -32301,
+                  "name": "flydubai",
+                  "alternateId": "FZ",
+                  "allianceId": 0,
+                  "displayCode": ""
+                },
+                "operatingCarrier": {
+                  "id": -32301,
+                  "name": "flydubai",
+                  "alternateId": "FZ",
+                  "allianceId": 0,
+                  "displayCode": ""
+                }
+              }
+            ]
+          },
+          {
+            "id": "11182-2503311850--32301-0-9834-2503312200",
+            "origin": {
+              "id": "DXB",
+              "entityId": "95673506",
+              "name": "Dubai",
+              "displayCode": "DXB",
+              "city": "Dubai",
+              "country": "United Arab Emirates",
+              "isHighlighted": false
+            },
+            "destination": {
+              "id": "BEY",
+              "entityId": "128667319",
+              "name": "Beirut",
+              "displayCode": "BEY",
+              "city": "Beirut",
+              "country": "Lebanon",
+              "isHighlighted": false
+            },
+            "durationInMinutes": 250,
+            "stopCount": 0,
+            "isSmallestStops": false,
+            "departure": "2025-03-31T18:50:00",
+            "arrival": "2025-03-31T22:00:00",
+            "timeDeltaInDays": 0,
+            "carriers": {
+              "marketing": [
+                {
+                  "id": -32301,
+                  "alternateId": "FZ",
+                  "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/FZ.png",
+                  "name": "flydubai"
+                }
+              ],
+              "operationType": "fully_operated"
+            },
+            "segments": [
+              {
+                "id": "11182-9834-2503311850-2503312200--32301",
+                "origin": {
+                  "flightPlaceId": "DXB",
+                  "displayCode": "DXB",
+                  "parent": {
+                    "flightPlaceId": "DXBA",
+                    "displayCode": "DXB",
+                    "name": "Dubai",
+                    "type": "City"
+                  },
+                  "name": "Dubai",
+                  "type": "Airport",
+                  "country": "United Arab Emirates"
+                },
+                "destination": {
+                  "flightPlaceId": "BEY",
+                  "displayCode": "BEY",
+                  "parent": {
+                    "flightPlaceId": "BEIR",
+                    "displayCode": "BEY",
+                    "name": "Beirut",
+                    "type": "City"
+                  },
+                  "name": "Beirut",
+                  "type": "Airport",
+                  "country": "Lebanon"
+                },
+                "departure": "2025-03-31T18:50:00",
+                "arrival": "2025-03-31T22:00:00",
+                "durationInMinutes": 250,
+                "flightNumber": "159",
+                "marketingCarrier": {
+                  "id": -32301,
+                  "name": "flydubai",
+                  "alternateId": "FZ",
+                  "allianceId": 0,
+                  "displayCode": ""
+                },
+                "operatingCarrier": {
+                  "id": -32301,
+                  "name": "flydubai",
+                  "alternateId": "FZ",
+                  "allianceId": 0,
+                  "displayCode": ""
+                }
+              }
+            ]
+          }
+        ],
+        "isSelfTransfer": false,
+        "isProtectedSelfTransfer": false,
+        "farePolicy": {
+          "isChangeAllowed": false,
+          "isPartiallyChangeable": false,
+          "isCancellationAllowed": false,
+          "isPartiallyRefundable": false
+        },
+        "fareAttributes": {},
+        "isMashUp": false,
+        "hasFlexibleOptions": false,
+        "score": 0.566077
+      },
+      {
+        "id": "9834-2503182100--32062-0-11182-2503190210|11182-2503312140--32062-0-9834-2503312359",
+        "price": {
+          "raw": 426.99,
+          "formatted": "$427",
+          "pricingOptionId": "MJMO274J6WDE"
+        },
+        "legs": [
+          {
+            "id": "9834-2503182100--32062-0-11182-2503190210",
+            "origin": {
+              "id": "BEY",
+              "entityId": "128667319",
+              "name": "Beirut",
+              "displayCode": "BEY",
+              "city": "Beirut",
+              "country": "Lebanon",
+              "isHighlighted": false
+            },
+            "destination": {
+              "id": "DXB",
+              "entityId": "95673506",
+              "name": "Dubai",
+              "displayCode": "DXB",
+              "city": "Dubai",
+              "country": "United Arab Emirates",
+              "isHighlighted": false
+            },
+            "durationInMinutes": 190,
+            "stopCount": 0,
+            "isSmallestStops": false,
+            "departure": "2025-03-18T21:00:00",
+            "arrival": "2025-03-19T02:10:00",
+            "timeDeltaInDays": 1,
+            "carriers": {
+              "marketing": [
+                {
+                  "id": -32062,
+                  "alternateId": "ME",
+                  "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/ME.png",
+                  "name": "MEA"
+                }
+              ],
+              "operationType": "fully_operated"
+            },
+            "segments": [
+              {
+                "id": "9834-11182-2503182100-2503190210--32062",
+                "origin": {
+                  "flightPlaceId": "BEY",
+                  "displayCode": "BEY",
+                  "parent": {
+                    "flightPlaceId": "BEIR",
+                    "displayCode": "BEY",
+                    "name": "Beirut",
+                    "type": "City"
+                  },
+                  "name": "Beirut",
+                  "type": "Airport",
+                  "country": "Lebanon"
+                },
+                "destination": {
+                  "flightPlaceId": "DXB",
+                  "displayCode": "DXB",
+                  "parent": {
+                    "flightPlaceId": "DXBA",
+                    "displayCode": "DXB",
+                    "name": "Dubai",
+                    "type": "City"
+                  },
+                  "name": "Dubai",
+                  "type": "Airport",
+                  "country": "United Arab Emirates"
+                },
+                "departure": "2025-03-18T21:00:00",
+                "arrival": "2025-03-19T02:10:00",
+                "durationInMinutes": 190,
+                "flightNumber": "430",
+                "marketingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                },
+                "operatingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                }
+              }
+            ]
+          },
+          {
+            "id": "11182-2503312140--32062-0-9834-2503312359",
+            "origin": {
+              "id": "DXB",
+              "entityId": "95673506",
+              "name": "Dubai",
+              "displayCode": "DXB",
+              "city": "Dubai",
+              "country": "United Arab Emirates",
+              "isHighlighted": false
+            },
+            "destination": {
+              "id": "BEY",
+              "entityId": "128667319",
+              "name": "Beirut",
+              "displayCode": "BEY",
+              "city": "Beirut",
+              "country": "Lebanon",
+              "isHighlighted": false
+            },
+            "durationInMinutes": 199,
+            "stopCount": 0,
+            "isSmallestStops": false,
+            "departure": "2025-03-31T21:40:00",
+            "arrival": "2025-03-31T23:59:00",
+            "timeDeltaInDays": 0,
+            "carriers": {
+              "marketing": [
+                {
+                  "id": -32062,
+                  "alternateId": "ME",
+                  "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/ME.png",
+                  "name": "MEA"
+                }
+              ],
+              "operationType": "fully_operated"
+            },
+            "segments": [
+              {
+                "id": "11182-9834-2503312140-2503312359--32062",
+                "origin": {
+                  "flightPlaceId": "DXB",
+                  "displayCode": "DXB",
+                  "parent": {
+                    "flightPlaceId": "DXBA",
+                    "displayCode": "DXB",
+                    "name": "Dubai",
+                    "type": "City"
+                  },
+                  "name": "Dubai",
+                  "type": "Airport",
+                  "country": "United Arab Emirates"
+                },
+                "destination": {
+                  "flightPlaceId": "BEY",
+                  "displayCode": "BEY",
+                  "parent": {
+                    "flightPlaceId": "BEIR",
+                    "displayCode": "BEY",
+                    "name": "Beirut",
+                    "type": "City"
+                  },
+                  "name": "Beirut",
+                  "type": "Airport",
+                  "country": "Lebanon"
+                },
+                "departure": "2025-03-31T21:40:00",
+                "arrival": "2025-03-31T23:59:00",
+                "durationInMinutes": 199,
+                "flightNumber": "429",
+                "marketingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                },
+                "operatingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                }
+              }
+            ]
+          }
+        ],
+        "isSelfTransfer": false,
+        "isProtectedSelfTransfer": false,
+        "farePolicy": {
+          "isChangeAllowed": false,
+          "isPartiallyChangeable": false,
+          "isCancellationAllowed": false,
+          "isPartiallyRefundable": false
+        },
+        "fareAttributes": {},
+        "tags": ["third_cheapest", "shortest"],
+        "isMashUp": false,
+        "hasFlexibleOptions": false,
+        "score": 0.560825
+      },
+      {
+        "id": "9834-2503181115--32348-0-11182-2503181655|11182-2503311130--32348-0-9834-2503311400",
+        "price": {
+          "raw": 487.7,
+          "formatted": "$488",
+          "pricingOptionId": "hZpy8hogxAYw"
+        },
+        "legs": [
+          {
+            "id": "9834-2503181115--32348-0-11182-2503181655",
+            "origin": {
+              "id": "BEY",
+              "entityId": "128667319",
+              "name": "Beirut",
+              "displayCode": "BEY",
+              "city": "Beirut",
+              "country": "Lebanon",
+              "isHighlighted": false
+            },
+            "destination": {
+              "id": "DXB",
+              "entityId": "95673506",
+              "name": "Dubai",
+              "displayCode": "DXB",
+              "city": "Dubai",
+              "country": "United Arab Emirates",
+              "isHighlighted": false
+            },
+            "durationInMinutes": 220,
+            "stopCount": 0,
+            "isSmallestStops": false,
+            "departure": "2025-03-18T11:15:00",
+            "arrival": "2025-03-18T16:55:00",
+            "timeDeltaInDays": 0,
+            "carriers": {
+              "marketing": [
+                {
+                  "id": -32348,
+                  "alternateId": "EK",
+                  "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/EK.png",
+                  "name": "Emirates"
+                }
+              ],
+              "operating": [
+                {
+                  "id": -32301,
+                  "alternateId": "FZ",
+                  "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/FZ.png",
+                  "name": "flydubai"
+                }
+              ],
+              "operationType": "not_operated"
+            },
+            "segments": [
+              {
+                "id": "9834-11182-2503181115-2503181655--32348",
+                "origin": {
+                  "flightPlaceId": "BEY",
+                  "displayCode": "BEY",
+                  "parent": {
+                    "flightPlaceId": "BEIR",
+                    "displayCode": "BEY",
+                    "name": "Beirut",
+                    "type": "City"
+                  },
+                  "name": "Beirut",
+                  "type": "Airport",
+                  "country": "Lebanon"
+                },
+                "destination": {
+                  "flightPlaceId": "DXB",
+                  "displayCode": "DXB",
+                  "parent": {
+                    "flightPlaceId": "DXBA",
+                    "displayCode": "DXB",
+                    "name": "Dubai",
+                    "type": "City"
+                  },
+                  "name": "Dubai",
+                  "type": "Airport",
+                  "country": "United Arab Emirates"
+                },
+                "departure": "2025-03-18T11:15:00",
+                "arrival": "2025-03-18T16:55:00",
+                "durationInMinutes": 220,
+                "flightNumber": "2489",
+                "marketingCarrier": {
+                  "id": -32348,
+                  "name": "Emirates",
+                  "alternateId": "EK",
+                  "allianceId": 0,
+                  "displayCode": ""
+                },
+                "operatingCarrier": {
+                  "id": -32301,
+                  "name": "flydubai",
+                  "alternateId": "FZ",
+                  "allianceId": 0,
+                  "displayCode": ""
+                }
+              }
+            ]
+          },
+          {
+            "id": "11182-2503311130--32348-0-9834-2503311400",
+            "origin": {
+              "id": "DXB",
+              "entityId": "95673506",
+              "name": "Dubai",
+              "displayCode": "DXB",
+              "city": "Dubai",
+              "country": "United Arab Emirates",
+              "isHighlighted": false
+            },
+            "destination": {
+              "id": "BEY",
+              "entityId": "128667319",
+              "name": "Beirut",
+              "displayCode": "BEY",
+              "city": "Beirut",
+              "country": "Lebanon",
+              "isHighlighted": false
+            },
+            "durationInMinutes": 210,
+            "stopCount": 0,
+            "isSmallestStops": false,
+            "departure": "2025-03-31T11:30:00",
+            "arrival": "2025-03-31T14:00:00",
+            "timeDeltaInDays": 0,
+            "carriers": {
+              "marketing": [
+                {
+                  "id": -32348,
+                  "alternateId": "EK",
+                  "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/EK.png",
+                  "name": "Emirates"
+                }
+              ],
+              "operationType": "fully_operated"
+            },
+            "segments": [
+              {
+                "id": "11182-9834-2503311130-2503311400--32348",
+                "origin": {
+                  "flightPlaceId": "DXB",
+                  "displayCode": "DXB",
+                  "parent": {
+                    "flightPlaceId": "DXBA",
+                    "displayCode": "DXB",
+                    "name": "Dubai",
+                    "type": "City"
+                  },
+                  "name": "Dubai",
+                  "type": "Airport",
+                  "country": "United Arab Emirates"
+                },
+                "destination": {
+                  "flightPlaceId": "BEY",
+                  "displayCode": "BEY",
+                  "parent": {
+                    "flightPlaceId": "BEIR",
+                    "displayCode": "BEY",
+                    "name": "Beirut",
+                    "type": "City"
+                  },
+                  "name": "Beirut",
+                  "type": "Airport",
+                  "country": "Lebanon"
+                },
+                "departure": "2025-03-31T11:30:00",
+                "arrival": "2025-03-31T14:00:00",
+                "durationInMinutes": 210,
+                "flightNumber": "953",
+                "marketingCarrier": {
+                  "id": -32348,
+                  "name": "Emirates",
+                  "alternateId": "EK",
+                  "allianceId": 0,
+                  "displayCode": ""
+                },
+                "operatingCarrier": {
+                  "id": -32348,
+                  "name": "Emirates",
+                  "alternateId": "EK",
+                  "allianceId": 0,
+                  "displayCode": ""
+                }
+              }
+            ]
+          }
+        ],
+        "isSelfTransfer": false,
+        "isProtectedSelfTransfer": false,
+        "farePolicy": {
+          "isChangeAllowed": false,
+          "isPartiallyChangeable": false,
+          "isCancellationAllowed": false,
+          "isPartiallyRefundable": false
+        },
+        "eco": { "ecoContenderDelta": 7.2164593 },
+        "fareAttributes": {},
+        "isMashUp": false,
+        "hasFlexibleOptions": false,
+        "score": 0.560228
+      },
+      {
+        "id": "9834-2503182100--32062-0-11182-2503190210|11182-2503310215--32062-0-9834-2503310435",
+        "price": {
+          "raw": 426.99,
+          "formatted": "$427",
+          "pricingOptionId": "-1f0-ij1g2qI"
+        },
+        "legs": [
+          {
+            "id": "9834-2503182100--32062-0-11182-2503190210",
+            "origin": {
+              "id": "BEY",
+              "entityId": "128667319",
+              "name": "Beirut",
+              "displayCode": "BEY",
+              "city": "Beirut",
+              "country": "Lebanon",
+              "isHighlighted": false
+            },
+            "destination": {
+              "id": "DXB",
+              "entityId": "95673506",
+              "name": "Dubai",
+              "displayCode": "DXB",
+              "city": "Dubai",
+              "country": "United Arab Emirates",
+              "isHighlighted": false
+            },
+            "durationInMinutes": 190,
+            "stopCount": 0,
+            "isSmallestStops": false,
+            "departure": "2025-03-18T21:00:00",
+            "arrival": "2025-03-19T02:10:00",
+            "timeDeltaInDays": 1,
+            "carriers": {
+              "marketing": [
+                {
+                  "id": -32062,
+                  "alternateId": "ME",
+                  "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/ME.png",
+                  "name": "MEA"
+                }
+              ],
+              "operationType": "fully_operated"
+            },
+            "segments": [
+              {
+                "id": "9834-11182-2503182100-2503190210--32062",
+                "origin": {
+                  "flightPlaceId": "BEY",
+                  "displayCode": "BEY",
+                  "parent": {
+                    "flightPlaceId": "BEIR",
+                    "displayCode": "BEY",
+                    "name": "Beirut",
+                    "type": "City"
+                  },
+                  "name": "Beirut",
+                  "type": "Airport",
+                  "country": "Lebanon"
+                },
+                "destination": {
+                  "flightPlaceId": "DXB",
+                  "displayCode": "DXB",
+                  "parent": {
+                    "flightPlaceId": "DXBA",
+                    "displayCode": "DXB",
+                    "name": "Dubai",
+                    "type": "City"
+                  },
+                  "name": "Dubai",
+                  "type": "Airport",
+                  "country": "United Arab Emirates"
+                },
+                "departure": "2025-03-18T21:00:00",
+                "arrival": "2025-03-19T02:10:00",
+                "durationInMinutes": 190,
+                "flightNumber": "430",
+                "marketingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                },
+                "operatingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                }
+              }
+            ]
+          },
+          {
+            "id": "11182-2503310215--32062-0-9834-2503310435",
+            "origin": {
+              "id": "DXB",
+              "entityId": "95673506",
+              "name": "Dubai",
+              "displayCode": "DXB",
+              "city": "Dubai",
+              "country": "United Arab Emirates",
+              "isHighlighted": false
+            },
+            "destination": {
+              "id": "BEY",
+              "entityId": "128667319",
+              "name": "Beirut",
+              "displayCode": "BEY",
+              "city": "Beirut",
+              "country": "Lebanon",
+              "isHighlighted": false
+            },
+            "durationInMinutes": 200,
+            "stopCount": 0,
+            "isSmallestStops": false,
+            "departure": "2025-03-31T02:15:00",
+            "arrival": "2025-03-31T04:35:00",
+            "timeDeltaInDays": 0,
+            "carriers": {
+              "marketing": [
+                {
+                  "id": -32062,
+                  "alternateId": "ME",
+                  "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/ME.png",
+                  "name": "MEA"
+                }
+              ],
+              "operationType": "fully_operated"
+            },
+            "segments": [
+              {
+                "id": "11182-9834-2503310215-2503310435--32062",
+                "origin": {
+                  "flightPlaceId": "DXB",
+                  "displayCode": "DXB",
+                  "parent": {
+                    "flightPlaceId": "DXBA",
+                    "displayCode": "DXB",
+                    "name": "Dubai",
+                    "type": "City"
+                  },
+                  "name": "Dubai",
+                  "type": "Airport",
+                  "country": "United Arab Emirates"
+                },
+                "destination": {
+                  "flightPlaceId": "BEY",
+                  "displayCode": "BEY",
+                  "parent": {
+                    "flightPlaceId": "BEIR",
+                    "displayCode": "BEY",
+                    "name": "Beirut",
+                    "type": "City"
+                  },
+                  "name": "Beirut",
+                  "type": "Airport",
+                  "country": "Lebanon"
+                },
+                "departure": "2025-03-31T02:15:00",
+                "arrival": "2025-03-31T04:35:00",
+                "durationInMinutes": 200,
+                "flightNumber": "431",
+                "marketingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                },
+                "operatingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                }
+              }
+            ]
+          }
+        ],
+        "isSelfTransfer": false,
+        "isProtectedSelfTransfer": false,
+        "farePolicy": {
+          "isChangeAllowed": false,
+          "isPartiallyChangeable": false,
+          "isCancellationAllowed": false,
+          "isPartiallyRefundable": false
+        },
+        "fareAttributes": {},
+        "isMashUp": false,
+        "hasFlexibleOptions": false,
+        "score": 0.556967
+      },
+      {
+        "id": "9834-2503181615--32062-0-11182-2503182125|11182-2503312140--32062-0-9834-2503312359",
+        "price": {
+          "raw": 445.0,
+          "formatted": "$445",
+          "pricingOptionId": "1E6R3wodysbf"
+        },
+        "legs": [
+          {
+            "id": "9834-2503181615--32062-0-11182-2503182125",
+            "origin": {
+              "id": "BEY",
+              "entityId": "128667319",
+              "name": "Beirut",
+              "displayCode": "BEY",
+              "city": "Beirut",
+              "country": "Lebanon",
+              "isHighlighted": false
+            },
+            "destination": {
+              "id": "DXB",
+              "entityId": "95673506",
+              "name": "Dubai",
+              "displayCode": "DXB",
+              "city": "Dubai",
+              "country": "United Arab Emirates",
+              "isHighlighted": false
+            },
+            "durationInMinutes": 190,
+            "stopCount": 0,
+            "isSmallestStops": false,
+            "departure": "2025-03-18T16:15:00",
+            "arrival": "2025-03-18T21:25:00",
+            "timeDeltaInDays": 0,
+            "carriers": {
+              "marketing": [
+                {
+                  "id": -32062,
+                  "alternateId": "ME",
+                  "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/ME.png",
+                  "name": "MEA"
+                }
+              ],
+              "operationType": "fully_operated"
+            },
+            "segments": [
+              {
+                "id": "9834-11182-2503181615-2503182125--32062",
+                "origin": {
+                  "flightPlaceId": "BEY",
+                  "displayCode": "BEY",
+                  "parent": {
+                    "flightPlaceId": "BEIR",
+                    "displayCode": "BEY",
+                    "name": "Beirut",
+                    "type": "City"
+                  },
+                  "name": "Beirut",
+                  "type": "Airport",
+                  "country": "Lebanon"
+                },
+                "destination": {
+                  "flightPlaceId": "DXB",
+                  "displayCode": "DXB",
+                  "parent": {
+                    "flightPlaceId": "DXBA",
+                    "displayCode": "DXB",
+                    "name": "Dubai",
+                    "type": "City"
+                  },
+                  "name": "Dubai",
+                  "type": "Airport",
+                  "country": "United Arab Emirates"
+                },
+                "departure": "2025-03-18T16:15:00",
+                "arrival": "2025-03-18T21:25:00",
+                "durationInMinutes": 190,
+                "flightNumber": "428",
+                "marketingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                },
+                "operatingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                }
+              }
+            ]
+          },
+          {
+            "id": "11182-2503312140--32062-0-9834-2503312359",
+            "origin": {
+              "id": "DXB",
+              "entityId": "95673506",
+              "name": "Dubai",
+              "displayCode": "DXB",
+              "city": "Dubai",
+              "country": "United Arab Emirates",
+              "isHighlighted": false
+            },
+            "destination": {
+              "id": "BEY",
+              "entityId": "128667319",
+              "name": "Beirut",
+              "displayCode": "BEY",
+              "city": "Beirut",
+              "country": "Lebanon",
+              "isHighlighted": false
+            },
+            "durationInMinutes": 199,
+            "stopCount": 0,
+            "isSmallestStops": false,
+            "departure": "2025-03-31T21:40:00",
+            "arrival": "2025-03-31T23:59:00",
+            "timeDeltaInDays": 0,
+            "carriers": {
+              "marketing": [
+                {
+                  "id": -32062,
+                  "alternateId": "ME",
+                  "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/ME.png",
+                  "name": "MEA"
+                }
+              ],
+              "operationType": "fully_operated"
+            },
+            "segments": [
+              {
+                "id": "11182-9834-2503312140-2503312359--32062",
+                "origin": {
+                  "flightPlaceId": "DXB",
+                  "displayCode": "DXB",
+                  "parent": {
+                    "flightPlaceId": "DXBA",
+                    "displayCode": "DXB",
+                    "name": "Dubai",
+                    "type": "City"
+                  },
+                  "name": "Dubai",
+                  "type": "Airport",
+                  "country": "United Arab Emirates"
+                },
+                "destination": {
+                  "flightPlaceId": "BEY",
+                  "displayCode": "BEY",
+                  "parent": {
+                    "flightPlaceId": "BEIR",
+                    "displayCode": "BEY",
+                    "name": "Beirut",
+                    "type": "City"
+                  },
+                  "name": "Beirut",
+                  "type": "Airport",
+                  "country": "Lebanon"
+                },
+                "departure": "2025-03-31T21:40:00",
+                "arrival": "2025-03-31T23:59:00",
+                "durationInMinutes": 199,
+                "flightNumber": "429",
+                "marketingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                },
+                "operatingCarrier": {
+                  "id": -32062,
+                  "name": "MEA",
+                  "alternateId": "ME",
+                  "allianceId": 0,
+                  "displayCode": ""
+                }
+              }
+            ]
+          }
+        ],
+        "isSelfTransfer": false,
+        "isProtectedSelfTransfer": false,
+        "farePolicy": {
+          "isChangeAllowed": false,
+          "isPartiallyChangeable": false,
+          "isCancellationAllowed": false,
+          "isPartiallyRefundable": false
+        },
+        "eco": { "ecoContenderDelta": 9.921349 },
+        "fareAttributes": {},
+        "tags": ["second_shortest"],
+        "isMashUp": false,
+        "hasFlexibleOptions": false,
+        "score": 0.555825
+      }
+    ],
+    "messages": [],
+    "filterStats": {
+      "duration": {
+        "min": 199,
+        "max": 250,
+        "multiCityMin": 389,
+        "multiCityMax": 470
+      },
+      "airports": [
+        {
+          "city": "Beirut",
+          "airports": [
+            { "id": "BEY", "entityId": "128667319", "name": "Beirut" }
+          ]
+        },
+        {
+          "city": "Dubai",
+          "airports": [{ "id": "DXB", "entityId": "95673506", "name": "Dubai" }]
+        }
+      ],
+      "carriers": [
+        {
+          "id": -32348,
+          "alternateId": "EK",
+          "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/EK.png",
+          "name": "Emirates"
+        },
+        {
+          "id": -32301,
+          "alternateId": "FZ",
+          "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/FZ.png",
+          "name": "flydubai"
+        },
+        {
+          "id": -32062,
+          "alternateId": "ME",
+          "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/ME.png",
+          "name": "MEA"
+        }
+      ],
+      "stopPrices": {
+        "direct": { "isPresent": true, "formattedPrice": "$403" },
+        "one": { "isPresent": false },
+        "twoOrMore": { "isPresent": false }
+      }
+    },
+    "flightsSessionId": "f4c69311-2e38-4f14-92f6-05f399321634",
+    "destinationImageUrl": "https://content.skyscnr.com/m/3719e8f4a5daf43d/original/Flights-Placeholder.jpg",
+    "token": "eyJhIjoxLCJjIjowLCJpIjowLCJjYyI6ImVjb25vbXkiLCJvIjoiQkVZIiwiZCI6IkRYQiIsImQxIjoiMjAyNS0wMy0xOCIsImQyIjoiMjAyNS0wMy0zMSJ9"
+  },
+  "status": true,
+  "message": "Successful"
+}

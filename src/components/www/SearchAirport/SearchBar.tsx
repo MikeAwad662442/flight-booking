@@ -1,12 +1,12 @@
 /*******************************
  * @author: Mike Awad
- * @description: **********************
+ * @description: Search Bar
  * =====================
- * [-]
- * [-]
+ * [X] Airport Input Search
+ * [X] Calender
+ * [X] passenger
+ * [X] Flight Type
  *
- *
- * ????? shadcn/UI
  *******************************/
 "use client";
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -43,17 +43,22 @@ import {
 import { onSubmitSearchAction } from "@/app/api/airports/route";
 import DatePicker from "./DatePicker";
 import { PassengerSelector } from "./OtherInfo";
-import { useRouter } from "@/i18n/routing";
+import { usePathname, useRouter } from "@/i18n/routing";
+// import { useEffect, useState } from "react";
 
 // ===================== //
 // == React Hook Form == //
-const SearchBar = () => {
+type ValueProps = {
+  Value?: SearchFlightSchemaType;
+};
+const SearchBar = ({ Value }: ValueProps) => {
   const SearchBarT = useTranslations("Search.SearchBarComponent");
-  const router = useRouter();
+  const Router = useRouter();
+  const PathName = usePathname();
+  let DateValue;
 
-  const SearchInfo = useForm<SearchFlightSchemaType>({
-    resolver: zodResolver(SearchFlightSchema),
-    defaultValues: {
+  if (!Value) {
+    DateValue = {
       FromAirport: "",
       FromDate: "",
       ToAirport: "",
@@ -61,7 +66,14 @@ const SearchBar = () => {
       cabinClass: "economy",
       children: "0",
       adults: "1",
-    },
+    };
+  } else {
+    DateValue = Value;
+  }
+
+  const SearchInfo = useForm<SearchFlightSchemaType>({
+    resolver: zodResolver(SearchFlightSchema),
+    defaultValues: DateValue,
     mode: "all",
   });
   // ===================== //
@@ -90,7 +102,6 @@ const SearchBar = () => {
       formData.append("adults", values.adults);
       formData.append("children", values.children || "0");
 
-      // console.log("onSubmit", FormData);
       const { message, success, data, issues } =
         await onSubmitSearchAction(formData);
       if (success) {
@@ -118,7 +129,10 @@ const SearchBar = () => {
         // ===================== //
         setTimeout(() => {
           toast.success(message);
-          router.push("/flight-booking");
+          if (PathName === "/flight-booking") {
+            window.location.reload();
+          }
+          Router.push("/flight-booking");
         }, 1000);
       }
       toast.error(message, {
@@ -133,7 +147,7 @@ const SearchBar = () => {
   return (
     <Form {...SearchInfo}>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Card className="mx-auto w-fit">
+        <Card className="mx-auto w-fit border-2 bg-slate-50">
           <CardHeader>
             <CardTitle>{SearchBarT("Search")}</CardTitle>
           </CardHeader>
@@ -144,7 +158,9 @@ const SearchBar = () => {
               name="FromAirport"
               render={({ field }) => (
                 <FormItem className="flex flex-col space-y-2">
-                  <FormLabel>{SearchBarT("FromAirport")}</FormLabel>
+                  <FormLabel className="text-primary">
+                    {SearchBarT("FromAirport")}
+                  </FormLabel>
                   <FormControl>
                     <AirportSearch
                       value={field.value}
@@ -182,7 +198,9 @@ const SearchBar = () => {
               name="ToAirport"
               render={({ field }) => (
                 <FormItem className="flex flex-col space-y-2">
-                  <FormLabel>{SearchBarT("ToAirport")}</FormLabel>
+                  <FormLabel className="text-primary">
+                    {SearchBarT("ToAirport")}
+                  </FormLabel>
                   <FormControl>
                     <AirportSearch
                       value={field.value}

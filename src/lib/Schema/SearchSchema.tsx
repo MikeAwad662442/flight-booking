@@ -27,7 +27,8 @@ export const SearchFlightSchema = z.object({
 
 export type SearchFlightSchemaType = z.infer<typeof SearchFlightSchema>;
 
-export type Flight = {
+export type FlightType = {
+  id: string;
   Price: string;
   AirLineLogo: string;
   AirLineName: string;
